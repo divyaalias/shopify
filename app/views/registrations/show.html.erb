@@ -1,0 +1,71 @@
+<section id="course-content">
+  <section id="ruby">
+    <section class="detailed-syllabus">
+      <div class="wrapper-inside">
+        <h3 class="title">Order invoice</h3>
+      </div>
+      <div class="columns clearfix">
+        <div class="left" style="padding-left:100px;">
+          <% if notice %>
+            <p id="notice" style="background-color: lightgreen;padding: 5px;">
+              <%= notice %>
+            </p>
+          <% end %>
+          <% if alert %>
+            <p id="alert" style="background-color: lightpink;padding: 5px;">
+              <%= alert %>
+            </p>
+          <% end %>
+          <p>
+            <strong>Order:</strong>
+            <%= @registration.order.name %>
+          </p>
+          <p>
+          <p>
+            <strong>Quantity:</strong>
+            <%= @registration.quantity %>
+          </p>
+          <p>
+            <strong>Price:</strong>
+             $<%= @registration.card.card_transaction.params["amount"] %>
+          </p>
+          <p>
+            <strong>Full name:</strong>
+            <%= @registration.full_name %>
+          </p>
+          <p>
+            <strong>Company:</strong>
+            <%= @registration.company %>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <%= @registration.email %>
+          </p>
+          <p>
+            <strong>Telephone:</strong>
+            <%= @registration.telephone %>
+          </p>
+          <p>
+            <strong>Payment method:</strong>
+            <%= @registration.payment_method.capitalize %>
+          </p>
+          <% if @registration.payment_method == "paypal" %>
+            <p>
+              <strong>Payment status:</strong>
+              <%= @registration.status %>
+            </p>
+            <p>
+              <strong>Paypal Transaction Identifier:</strong>
+              <%= @registration.transaction_id %>
+            </p>
+          <% else %>
+            <p>
+              <strong>Transaction Identifier:</strong>
+              <%= @registration.card.card_transaction.params["transaction_id"] %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>

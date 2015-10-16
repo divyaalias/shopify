@@ -52,3 +52,6 @@ body {
 footer {
     margin: 50px 0;
 }
+.side-category {
+     height: 550px !important;
+}

@@ -33,10 +33,12 @@
       <div class="thumbnail">
         <img src="../../assets/nexus-6.jpg" class="img-responsive" alt="Responsive image"/>
           <div class="caption">
+            <%= link_to new_registration_path(order_id: order.id), class: "ruby" do %>
               <h4 class="pull-right">$<%= order.price %></h4>
               <h4><a href="#"><%= order.name %></a>
               </h4>
-              <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+            <% end %>
+            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
           </div>
           <div class="ratings">
               <p class="pull-right">15 reviews</p>

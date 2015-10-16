@@ -55,3 +55,21 @@ footer {
 .side-category {
      height: 550px !important;
 }
+.basic-grey {
+    background: none repeat scroll 0 0 rgb(247, 247, 247);
+    border: 1px solid rgb(228, 228, 228);
+    color: rgb(136, 136, 136);
+    font: 12px Georgia,"Times New Roman",Times,serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    padding: 25px 15px 25px 10px;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+.basic-grey input[type="radio"], .field.payment_method, fieldset.card_info {
+    margin: 20px;
+}
+fieldset {
+    border: 1px solid rgb(192, 192, 192);
+    padding: 0.35em 0.625em 0.75em;
+}
